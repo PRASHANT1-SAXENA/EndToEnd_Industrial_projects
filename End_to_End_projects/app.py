@@ -13,6 +13,7 @@ scaler=pickle.load(open("scaling.pkl",'rb'))
 def home():
     return render_template('home.html')
 
+# TO see on the postman with below api
 @app.route('/predict_api',methods=['Get','POST'])
 def predict_api():
     data=request.json['data']
@@ -24,6 +25,18 @@ def predict_api():
     # since output is in two demension as we see in the ipynb file
     print(output[0])
     return jsonify(output[0])
+
+# to show on the website
+
+@app.route('/predict',methods=['GET','POST'])
+def predict():
+    data=[float(x) for x in request.form.values()]
+    final_input =scaler.transform(np.array(data).reshape(1,-1))
+    print(final_input)
+    output=regmodel.predict(final_input)[0]
+    return render_template('home.html',prediction_text="The predicted house price is {}".format(output))
+
+
 
 if __name__=="__main__":
     app.run(debug=True)
