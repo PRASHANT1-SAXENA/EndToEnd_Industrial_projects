@@ -1,0 +1,54 @@
+body{background-image:url("back_image.jpg");
+    /* background-color:rgb(2, 8, 18); */
+
+}
+
+.heading {
+    margin-top:-10px;
+    margin-left: -10px;
+    margin-right:-10px;
+    color:red;
+    background-color: hsl(0, 11%, 54%,0.4);
+    text-align: center;
+    padding: 16px;
+    
+} 
+.first_line{
+    color:black;
+}
+
+.about {
+    color:red;
+}
+input {
+    margin-left: 5px;
+    background-color: grey;
+}
+
+.box {
+    margin-top: 20px;
+    margin-left: 628px;
+    margin-right: 557px;
+    text-align: center;
+    color: rgb(100, 100, 185);
+    font-weight: 900;
+    font-size: 150%;
+    background-color: brown;
+  }
+  
+  .box:not(:empty) {
+    padding: 10px;
+  }
+
+
+
+
+#submit{
+    color:darkgray; 
+    margin-left:120px;
+    height:30px;
+    width: 100px;
+    padding:30;
+    background-color: brown;
+}
+

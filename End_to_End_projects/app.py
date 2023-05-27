@@ -34,10 +34,7 @@ def predict():
     print(data)
     final_input = scaler.transform(np.array(data).reshape(1, -1))
     output = regmodel.predict(final_input)[0]
-    return render_template('home.html', prediction_text="The predicted house price is {}".format(output))
-
-
-
+    return render_template('home.html', prediction_text=" Your house price will be {}".format(output),set_p="welcome to Home")
 
 
 
