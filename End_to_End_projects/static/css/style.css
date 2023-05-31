@@ -23,6 +23,9 @@ body{background-image:url("back_image.jpg");
 input {
     margin-left: 5px;
     background-color: grey;
+    height:30px;
+    text-indent: 7px;
+    
 }
 
 .box {
@@ -30,14 +33,18 @@ input {
     margin-left: 628px;
     margin-right: 557px;
     text-align: center;
-    color: rgb(100, 100, 185);
+    color: rgb(235, 242, 244);
     font-weight: 900;
     font-size: 150%;
     background-color: brown;
+    transition: opacity 0.15s;
   }
   
   .box:not(:empty) {
     padding: 10px;
+  }
+  .box:hover {
+    opacity:0.8;
   }
 
 
@@ -49,6 +56,15 @@ input {
     height:30px;
     width: 100px;
     padding:30;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
     background-color: brown;
 }
 
+#submit:hover{
+    background-color: blue;
+}
+#submit:active{
+    background-color:greenyellow;
+}

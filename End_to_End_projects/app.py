@@ -41,3 +41,6 @@ def predict():
 if __name__=="__main__":
     app.run(debug=True)
 
+# Procfile is made when i have to host my app on heroku
+
+
